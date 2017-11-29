@@ -11,13 +11,13 @@ from operator import itemgetter
 # text=("Taking in folk in off-hand like Frodo and eating extra food, and all that, said Hob. Frodo 'What's the matter with the place? Frodo?' said Merry. 'Frodo has it been a bad year, or what?")
 data_dir = 'resources/LOTR.txt'
 text = open(data_dir, 'r').read()
-text=text[0:10000]
+text=text[0:1000]
 wordRegEx = re.compile("(?:[a-zA-Z]+)|(?:[,;:.!'´])")
 words = wordRegEx.findall(text)
-words_org = words  # will be used on the end for saving
+words_org = words  # will be used in the end for saving
 
 
-def main():
+def main(): # convert all words after end of sentence to lowercase.
     a = [[0, 0, 0, 0]]  # [value, idx, freq, final idx]
     words_file = [[0, 0]]
     outText = [[0, 0]]
