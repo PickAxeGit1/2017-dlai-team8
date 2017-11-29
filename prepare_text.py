@@ -13,12 +13,13 @@ import io
 # text=("This account of the 'end of the? 'Third' Age is of drawn mainly Third Age from the Red Book of Westmarch. That most important source for the history of the War of the Ring was so called because it was long preserved at Undertowers, the home of the Fairbairns, Wardens of the Westmarch. 1 It was in origin Bilbo's private diary, which he took with him to Rivendell. Frodo brought it back to the Shire, together with many loose leaves of notes, and during S.R. 1420-1 he nearly filled its pages with his account of the War. But annexed to it and preserved with it, probably m a single red case,")
 # text=("Taking in folk in off-hand like Frodo and eating extra food, and all that, said Hob. Frodo 'What's the matter with the place? Frodo?' said Merry. 'Frodo has it been a bad year, or what?")
 data_dir = 'resources/LOTR.txt'
-#text = open(data_dir, 'r').read()
-#text = io.open(data_dir, mode="r", encoding="utf-8")
-#with open(input(data_dir), "r") as text:
-text = open(input(data_dir), "r").readlines()
-#text=text.readlines()
-#text=text[0:1000]
+# text = open(data_dir, 'r').read()
+# text = io.open(data_dir, mode="r", encoding="utf-8")
+# with open(input(data_dir), "r") as text:
+text = open(data_dir, "r").read()
+
+# text=text.readlines()
+# text=text[0:1000]
 wordRegEx = re.compile("(?:[a-zA-Z]+)|(?:[,;:.!'´])")
 words = wordRegEx.findall(text)
 words_org = words  # will be used in the end for saving
