@@ -1,7 +1,5 @@
-
-# coding: utf-8
-
 from __future__ import print_function
+# coding: utf-8
 
 # In[2]:
 
