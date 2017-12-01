@@ -48,7 +48,7 @@ LAYER_NUM = 2
 SEQ_LENGTH = 50
 HIDDEN_DIM = 500
 GENERATE_LENGTH = 500
-NB_EPOCH = 2 # standard:20
+NB_EPOCH = 100 # standard:20
 MODE = "train"
 WEIGHTS = ""
 
@@ -218,11 +218,11 @@ if MODE == 'train' or WEIGHTS == '':
     print('\n\nEpoch: {}\n'.format(nb_epoch))
     model.fit(X, y, batch_size=BATCH_SIZE, verbose=1, nb_epoch=1)
     nb_epoch += 1
-    generate_text(model, GENERATE_LENGTH, VOCAB_SIZE, ix_to_char)
     
     #save every 10th epoch
-    if nb_epoch % 2 == 0:
+    if nb_epoch % 5 == 0:
       model.save_weights('checkpoint_layer_{}_hidden_{}_epoch_{}.hdf5'.format(LAYER_NUM, HIDDEN_DIM, nb_epoch))
+      generate_text(model, GENERATE_LENGTH, VOCAB_SIZE, ix_to_char)
 
 # Else, loading the trained weights and performing generation only
 elif WEIGHTS == '':
