@@ -1,6 +1,8 @@
 
 # coding: utf-8
 
+from __future__ import print_function
+
 # In[2]:
 
 
@@ -14,7 +16,6 @@ sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
 
 
 import math as math
-from __future__ import print_function
 #import matplotlib.pyplot as plt
 import numpy as np
 import time
