@@ -213,7 +213,7 @@ ix_to_char = load_pickle('ix_to_char')
 VOCAB_SIZE = load_pickle('VOCAB_SIZE')
 
 # Training if there is no trained weights specified
-if args['mode'] == 'train' or WEIGHTS == '':
+if MODE == 'train' or WEIGHTS == '':
   while True:
     print('\n\nEpoch: {}\n'.format(nb_epoch))
     model.fit(X, y, batch_size=BATCH_SIZE, verbose=1, nb_epoch=1)
