@@ -64,7 +64,7 @@ text = text[0:1000000]
 # In[5]:
 
 
-from __future__ import print_function
+#from __future__ import print_function
 import numpy as np
 
 # method for generating text
